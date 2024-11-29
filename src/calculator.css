@@ -1,6 +1,5 @@
-/* General styles for the calculator */
 .calculator {
-    width: 350px;
+    width: 400px;
     margin: 50px auto;
     padding: 20px;
     border-radius: 15px;
@@ -28,14 +27,6 @@
     animation: shake 0.3s ease-in-out;
   }
   
-  @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
-  }
-  
   .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -44,7 +35,7 @@
   
   button {
     height: 60px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     border: none;
     border-radius: 8px;
@@ -71,5 +62,21 @@
   
   button.equals:hover {
     background: #ff6b75;
+  }
+  
+  .toggle-button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .toggle-button:hover {
+    background: #42a5f5;
   }
   

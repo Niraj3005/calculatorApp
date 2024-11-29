@@ -1,13 +1,23 @@
-import React from "react";
-import Calculator from "./calculator";
+import React, { useState } from "react";
+import BasicCalculator from "./calculator";
+import AdvancedCalculator from "./AdvancedCalculator";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [showAdvanced, setShowAdvanced] = useState(false);
+
   return (
-    <div className="App">
+    <div className="app">
       <h1>React Calculator</h1>
-      <Calculator />
+      <button
+        onClick={() => setShowAdvanced(!showAdvanced)}
+        className="toggle-button"
+      >
+        {showAdvanced ? "Switch to Basic Calculator" : "Switch to Advanced Calculator"}
+      </button>
+      {showAdvanced ? <AdvancedCalculator /> : <BasicCalculator />}
     </div>
   );
-}
+};
 
 export default App;
