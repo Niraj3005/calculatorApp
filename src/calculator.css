@@ -1,0 +1,75 @@
+/* General styles for the calculator */
+.calculator {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #293a83, #ff758c);
+    color: white;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+  }
+  
+  .display {
+    font-size: 2rem;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    text-align: right;
+    overflow-x: auto;
+    word-wrap: break-word;
+  }
+  
+  .display.error {
+    color: red;
+    animation: shake 0.3s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+  
+  button {
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+  
+  button.equals {
+    grid-column: span 2;
+    background: #ff4b5c;
+    color: white;
+  }
+  
+  button.equals:hover {
+    background: #ff6b75;
+  }
+  
